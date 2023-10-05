@@ -1,0 +1,23 @@
+{
+  "name": "blog_task",
+  "version": "1.0.0",
+  "description": "The best package you will ever find.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": "https://github.com/Anishkumardiwan/climate_data_managment_system.git",
+  "author": "anish diwan",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "axios": "^1.5.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21"
+  }
+}
