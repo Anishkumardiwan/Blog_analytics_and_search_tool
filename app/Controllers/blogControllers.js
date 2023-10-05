@@ -4,10 +4,11 @@ const _ = require('lodash');
 
 exports.retriveAndAnalyzeData = async (req, res) => {
     try {
-        const apiUrl = "https://intent-kit-16.hasura.app/api/rest/blogs";
+        const { key } = req.headers;
+        const apiUrl = process.env.URL || "https://intent-kit-16.hasura.app/api/rest/blogs";
         const response = await axios.get(apiUrl, {
             headers: {
-                'x-hasura-admin-secret': "32qR4KmXOIpsGPQKMqEJHGJS27G5s7HdSKO3gdtQd2kv5e852SiYwWNfxkZOBuQ6",
+                'x-hasura-admin-secret': key,
             },
         });
 
@@ -26,7 +27,8 @@ exports.retriveAndAnalyzeData = async (req, res) => {
         });
 
     } catch (error) {
-        res.status(500).json({ error: 'Internal Server Error', message: error });
+        console.log("ERROR", error);
+        res.status(500).json({ error: 'Internal Server Error' });
     }
 }
 
