@@ -4,10 +4,10 @@ const _ = require('lodash');
 
 exports.retriveAndAnalyzeData = async (req, res) => {
     try {
-        const apiUrl = process.env.URL;
+        const apiUrl = "https://intent-kit-16.hasura.app/api/rest/blogs";
         const response = await axios.get(apiUrl, {
             headers: {
-                'x-hasura-admin-secret': process.env.KEY,
+                'x-hasura-admin-secret': "32qR4KmXOIpsGPQKMqEJHGJS27G5s7HdSKO3gdtQd2kv5e852SiYwWNfxkZOBuQ6",
             },
         });
 
